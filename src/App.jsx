@@ -1,22 +1,22 @@
+import { useContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Slide, ToastContainer } from "react-toastify";
 import "./App.css";
 import AppProtectedRoutes from "./components/ProtectedRoutes/AppProtectedRoutes";
 import AuthProtectedRoutes from "./components/ProtectedRoutes/AuthProtectedRoutes";
+import { authContext } from "./Contexts/AuthContext";
 import Signin from "./features/auth/signin/Signin";
 import Signup from "./features/auth/signup/Signup";
 import Bookmarks from "./features/platform/bookmarks/Bookmarks";
+import Explore from "./features/platform/explore/Explore";
 import Home from "./features/platform/Home/Home";
 import NotFound from "./features/platform/NotFound";
+import Notifications from "./features/platform/notifications/Notifications";
 import CreatePostModal from "./features/platform/posts/components/CreatePostModal";
+import ChangePassword from "./features/platform/profile/components/ChangePassword";
 import Profile from "./features/platform/profile/Profile";
 import AuthLayout from "./layouts/AuthLayout";
 import MainLayout from "./layouts/MainLayout";
-import { useContext } from "react";
-import { authContext } from "./Contexts/AuthContext";
-import Notifications from "./features/platform/notifications/Notifications";
-import Explore from "./features/platform/explore/Explore";
-import ProfileChangePassword from "./features/platform/profile/components/ProfileChangePassword";
 
 const routes = createBrowserRouter([
   {
@@ -63,7 +63,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/change-password",
-        element: <ProfileChangePassword />,
+        element: <ChangePassword />,
       },
       {
         path: "/notifications",

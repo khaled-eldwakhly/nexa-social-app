@@ -1,5 +1,5 @@
 import CardActions from "./CardActions";
-import PostDetailsButtom from "./PostDetailsButtom";
+import PostDetailsButton from "./PostDetailsButton";
 
 export default function CardFooter({
   detailsRendered,
@@ -10,7 +10,7 @@ export default function CardFooter({
     <>
       <CardActions postDetails={postDetails} setPostDetails={setPostDetails} />
       {!detailsRendered && (
-        <PostDetailsButtom
+        <PostDetailsButton
           postId={postDetails._id}
           setPostDetails={setPostDetails}
           postDetails={postDetails}

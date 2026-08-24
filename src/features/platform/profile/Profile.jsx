@@ -2,14 +2,9 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import Posts from "../posts/components/Posts";
 import { getUserPostsAPI } from "../posts/services/postsAPIs";
-import ProfileChangePassword from "./components/ProfileChangePassword";
 import ProfileHeader from "./components/ProfileHeader";
-import ProfileInfo from "./components/ProfileInfo";
 import ProfileSkeleton from "./components/ProfileSkeleton";
-import { getMyProfileAPI, getUserProfileAPI } from "./services//profileAPIs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGift } from "@fortawesome/free-solid-svg-icons";
-import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
+import { getUserProfileAPI } from "./services//profileAPIs";
 export default function Profile() {
   const { userId } = useParams();
 

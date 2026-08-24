@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import PostDetailsModal from "./PostDetailsModal";
 
-export default function PostDetailsButtom({
+export default function PostDetailsButton({
   postId,
   setPostDetails,
   postDetails,

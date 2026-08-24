@@ -11,7 +11,7 @@ import { authContext } from "../../../../Contexts/AuthContext";
 import { changePasswordSchema } from "../services/changePasswordSchema";
 import { changePasswordAPI } from "../services/profileAPIs";
 
-export default function ProfileChangePassword() {
+export default function ChangePassword() {
   const { setIsLoggedIn } = useContext(authContext);
   const navigate = useNavigate();
   const changePasswordMutation = useMutation({
