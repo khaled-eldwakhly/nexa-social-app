@@ -58,7 +58,7 @@ export default function SigninForm() {
   return (
     <>
       <section className="min-h-[70vh] md:min-h-auto flex items-center justify-center">
-        <div className="space-y-5 sm:min-w-sm p-6 rounded-xl text-gray-700 shadow-md shadow-blue-400/30">
+        <div className="space-y-5 sm:min-w-sm p-6 rounded-xl text-gray-700 shadow-md shadow-blue-400/30 bg-white">
           <div className="text-center">
             <h2 className="text-xl font-bold">Login</h2>
             <span className="text-sm text-gray-600">

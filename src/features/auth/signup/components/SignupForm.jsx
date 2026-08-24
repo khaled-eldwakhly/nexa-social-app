@@ -54,7 +54,7 @@ export default function SignupForm() {
   return (
     <>
       <section className="min-h-[70vh] py-10 lg:py-0 md:min-h-auto flex items-center justify-center">
-        <div className="space-y-5 shadow-md p-6 shadow-blue-400/30 rounded-xl">
+        <div className="space-y-5 shadow-md p-6 shadow-blue-400/30 rounded-xl bg-white">
           <div className="text-center">
             <h2 className="text-xl font-bold">Create an account</h2>
             <span className="text-sm text-gray-600">
