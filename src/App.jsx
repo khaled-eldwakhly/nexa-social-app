@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { authContext } from "./Contexts/AuthContext";
 import Notifications from "./features/platform/notifications/Notifications";
 import Explore from "./features/platform/explore/Explore";
+import ProfileChangePassword from "./features/platform/profile/components/ProfileChangePassword";
 
 const routes = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const routes = createBrowserRouter([
       {
         path: "/bookmarks",
         element: <Bookmarks />,
+      },
+      {
+        path: "/change-password",
+        element: <ProfileChangePassword />,
       },
       {
         path: "/notifications",

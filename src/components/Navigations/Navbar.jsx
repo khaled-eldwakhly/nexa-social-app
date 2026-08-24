@@ -1,6 +1,7 @@
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import {
   faBookmark,
+  faCodeCompare,
   faRightFromBracket,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -37,8 +38,8 @@ export default function Navbar() {
           </Link>
           {/* other links & profile icon */}
           <div className="flex items-center gap-4">
-            <div className="bg-tertiary px-1.5 py-1 flex justify-between items-center text-white rounded-lg">
-              <FontAwesomeIcon icon={faBell} className="text-xl" />
+            <div className="bg-tertiary px-1.5 py-1 flex justify-between items-center text-white rounded-md">
+              <FontAwesomeIcon icon={faBell} />
               {isLoading ? (
                 <Spinner size="sm" className="text-white" />
               ) : (
@@ -90,10 +91,13 @@ export default function Navbar() {
                     <Label>Dashboard</Label>
                   </Dropdown.Item>
                   <Dropdown.Item id="profile" textValue="Profile">
-                    <div className="flex justify-between items-center w-full">
+                    <Link
+                      to={"/profile"}
+                      className="flex justify-between items-center w-full"
+                    >
                       <Label>Profile</Label>
                       <FontAwesomeIcon icon={faUser} className="text-primary" />
-                    </div>
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item id="bookmarks" textValue="Bookmarks">
                     <Link
@@ -103,7 +107,22 @@ export default function Navbar() {
                       <Label>Bookmarks</Label>
                       <FontAwesomeIcon
                         icon={faBookmark}
-                        className="text-yellow-500"
+                        className="text-yellow-400"
+                      />
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    id="change-password"
+                    textValue="change-password"
+                  >
+                    <Link
+                      className="flex w-full items-center justify-between gap-2"
+                      to={"/change-password"}
+                    >
+                      <Label>Change Password</Label>
+                      <FontAwesomeIcon
+                        icon={faCodeCompare}
+                        className="text-green-500"
                       />
                     </Link>
                   </Dropdown.Item>
