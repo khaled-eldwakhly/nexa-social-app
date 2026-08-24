@@ -1,0 +1,356 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme {
+  --font-main: "Exo", sans-serif;
+  --font-sec: "Oswald", sans-serif;
+
+  --color-primary: #0077b6;
+
+  --color-secondary: #03045e;
+
+  --color-tertiary: #48cae4;
+
+  --color-neutral: #f8fafc;
+
+  /* ^ App colors */
+  /* --color-background: #0b1326;
+  --color-surface: #131b2e;
+  --color-surface-hover: #1e263d;
+  --color-border: #31394d;
+
+  --color-heading: #f8fafc;
+  --color-body: #e2e8f0;
+  --color-muted: #94a3b8;
+
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b; */
+}
+
+@layer components {
+  .main-padding {
+    @apply pt-17 pb-22 px-4;
+  }
+  .section-padding {
+    @apply py-8;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-main bg-neutral-100 text-gray-700;
+  }
+
+  :root,
+  .light,
+  .default,
+  [data-theme="light"],
+  [data-theme="default"] {
+    color-scheme: light;
+
+    /* ========================================
+       Primitive Colors
+       ======================================== */
+
+    --white: #f8fafc;
+    --black: #03045e;
+
+    /* ========================================
+       General
+       ======================================== */
+
+    --spacing: 0.25rem;
+
+    --border-width: 1px;
+    --field-border-width: 1px;
+    --disabled-opacity: 0.5;
+
+    --ring-offset-width: 2px;
+
+    --cursor-interactive: pointer;
+    --cursor-disabled: not-allowed;
+
+    --radius: 0.5rem;
+    --field-radius: calc(var(--radius) * 1.5);
+
+    /* ========================================
+       Background
+       ======================================== */
+
+    --background: #f8fafc;
+    --foreground: #03045e;
+
+    /* ========================================
+       Surfaces
+       ======================================== */
+
+    --surface: #ffffff;
+    --surface-foreground: #03045e;
+
+    --surface-secondary: #e8f8fc;
+    --surface-secondary-foreground: #03045e;
+
+    --surface-tertiary: #caf0f8;
+    --surface-tertiary-foreground: #03045e;
+
+    /* ========================================
+       Overlay
+       ======================================== */
+
+    --overlay: #ffffff;
+    --overlay-foreground: #5e032c;
+
+    /* ========================================
+       Muted
+       ======================================== */
+
+    --muted: #64748b;
+
+    /* ========================================
+       Default
+       ======================================== */
+
+    --default: #e8f8fc;
+    --default-foreground: #03045e;
+
+    /* ========================================
+       ⭐ PRIMARY / BRAND
+       ======================================== */
+
+    --accent: #0077b6;
+    --accent-foreground: #ffffff;
+
+    /* ========================================
+       Forms
+       ======================================== */
+
+    --field-background: #ffffff;
+    --field-foreground: #03045e;
+    --field-placeholder: #64748b;
+
+    --field-border: #cbd5e1;
+
+    /* ========================================
+       Status Colors
+       ======================================== */
+
+    --success: #10b981;
+    --success-foreground: #ffffff;
+
+    --warning: #f59e0b;
+    --warning-foreground: #03045e;
+
+    --danger: #ef4444;
+    --danger-foreground: #ffffff;
+
+    /* ========================================
+       Component Colors
+       ======================================== */
+
+    --segment: #ffffff;
+    --segment-foreground: #03045e;
+
+    /* ========================================
+       Borders
+       ======================================== */
+
+    --border: #cbd5e1;
+    --separator: #e2e8f0;
+
+    /* ========================================
+       Focus / Links
+       ======================================== */
+
+    --focus: var(--accent);
+    --link: #0077b6;
+
+    /* ========================================
+       Backdrop
+       ======================================== */
+
+    --backdrop: rgba(0, 0, 0, 0.6);
+
+    /* ========================================
+       Calculated Colors
+       ======================================== */
+
+    --surface-hover: color-mix(
+      in oklab,
+      var(--surface) 92%,
+      var(--surface-foreground) 8%
+    );
+
+    --background-secondary: color-mix(
+      in oklab,
+      var(--background) 96%,
+      var(--foreground) 4%
+    );
+
+    --background-tertiary: color-mix(
+      in oklab,
+      var(--background) 92%,
+      var(--foreground) 8%
+    );
+
+    --background-inverse: var(--foreground);
+
+    /* ========================================
+       Hover
+       ======================================== */
+
+    --default-hover: color-mix(
+      in oklab,
+      var(--default) 90%,
+      var(--default-foreground) 10%
+    );
+
+    --accent-hover: color-mix(
+      in oklab,
+      var(--accent) 90%,
+      var(--accent-foreground) 10%
+    );
+
+    --success-hover: color-mix(
+      in oklab,
+      var(--success) 90%,
+      var(--success-foreground) 10%
+    );
+
+    --warning-hover: color-mix(
+      in oklab,
+      var(--warning) 90%,
+      var(--warning-foreground) 10%
+    );
+
+    --danger-hover: color-mix(
+      in oklab,
+      var(--danger) 90%,
+      var(--danger-foreground) 10%
+    );
+
+    /* ========================================
+       Soft Colors
+       ======================================== */
+
+    --default-soft: color-mix(in oklab, var(--default) 50%, transparent);
+
+    --default-soft-foreground: var(--default-foreground);
+
+    --default-soft-hover: color-mix(in oklab, var(--default) 60%, transparent);
+
+    --accent-soft: color-mix(in oklab, var(--accent) 15%, transparent);
+
+    --accent-soft-foreground: color-mix(
+      in oklab,
+      var(--accent) 70%,
+      var(--foreground) 30%
+    );
+
+    --accent-soft-hover: color-mix(in oklab, var(--accent) 20%, transparent);
+
+    /* ========================================
+       Danger Soft
+       ======================================== */
+
+    --danger-soft: color-mix(in oklab, var(--danger) 15%, transparent);
+
+    --danger-soft-foreground: color-mix(
+      in oklab,
+      var(--danger) 70%,
+      var(--foreground) 30%
+    );
+
+    --danger-soft-hover: color-mix(in oklab, var(--danger) 20%, transparent);
+
+    /* ========================================
+       Warning Soft
+       ======================================== */
+
+    --warning-soft: color-mix(in oklab, var(--warning) 15%, transparent);
+
+    --warning-soft-foreground: color-mix(
+      in oklab,
+      var(--warning) 80%,
+      var(--foreground) 20%
+    );
+
+    --warning-soft-hover: color-mix(in oklab, var(--warning) 20%, transparent);
+
+    /* ========================================
+       Success Soft
+       ======================================== */
+
+    --success-soft: color-mix(in oklab, var(--success) 15%, transparent);
+
+    --success-soft-foreground: color-mix(
+      in oklab,
+      var(--success) 80%,
+      var(--foreground) 20%
+    );
+
+    --success-soft-hover: color-mix(in oklab, var(--success) 20%, transparent);
+
+    /* ========================================
+       Borders / Separators
+       ======================================== */
+
+    --separator-secondary: color-mix(
+      in oklab,
+      var(--surface) 85%,
+      var(--surface-foreground) 15%
+    );
+
+    --separator-tertiary: color-mix(
+      in oklab,
+      var(--surface) 81%,
+      var(--surface-foreground) 19%
+    );
+
+    --border-secondary: color-mix(
+      in oklab,
+      var(--surface) 78%,
+      var(--surface-foreground) 22%
+    );
+
+    --border-tertiary: color-mix(
+      in oklab,
+      var(--surface) 66%,
+      var(--surface-foreground) 34%
+    );
+
+    /* ========================================
+       Shadows
+       ======================================== */
+
+    --surface-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06),
+      0 0 1px 0 rgba(0, 0, 0, 0.06);
+
+    --overlay-shadow:
+      0 2px 8px 0 rgba(0, 0, 0, 0.06), 0 -6px 12px 0 rgba(0, 0, 0, 0.03),
+      0 14px 28px 0 rgba(0, 0, 0, 0.08);
+
+    --field-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    --skeleton-animation: shimmer;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "nexa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-regular-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.0",
+    "@heroui/react": "^3.2.2",
+    "@heroui/styles": "^3.1.0",
+    "@hookform/resolvers": "^5.4.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@tanstack/react-query": "^5.101.0",
+    "axios": "^1.17.0",
+    "date-fns": "^4.4.0",
+    "emoji-picker-react": "^4.19.1",
+    "motion": "^12.43.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-hook-form": "^7.73.1",
+    "react-router-dom": "^7.14.1",
+    "react-toastify": "^11.1.0",
+    "tailwindcss": "^4.2.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "vite": "^8.0.4"
+  }
+}
