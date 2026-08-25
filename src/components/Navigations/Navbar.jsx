@@ -143,7 +143,11 @@ export default function Navbar() {
                   >
                     <div
                       className="flex w-full items-center justify-between gap-2"
-                      onClick={() => setIsLoggedIn(false)}
+                      onClick={() => {
+                        setIsLoggedIn(false);
+                        localStorage.removeItem("token");
+                        localStorage.removeItem("userData");
+                      }}
                     >
                       <Label>Log Out</Label>
                       <FontAwesomeIcon
