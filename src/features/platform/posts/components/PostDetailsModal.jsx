@@ -30,7 +30,7 @@ export default function PostDetailsModal({
       <Modal isOpen={isOpen} onOpenChange={setIsOpen}>
         <Modal.Backdrop>
           <Modal.Container scroll={"inside"} placement="center">
-            <Modal.Dialog className="bg-surface rounded-lg! border border-tertiary-300/80">
+            <Modal.Dialog className="bg-surface rounded-lg! border border-tertiary/80 md:max-w-2/3">
               <Modal.Body className="space-y-3 relative text-gray-700">
                 <CardHeader
                   postDetails={postDetails}

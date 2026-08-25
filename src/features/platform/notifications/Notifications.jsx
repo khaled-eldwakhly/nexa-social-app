@@ -6,6 +6,8 @@ import {
   getNotificationsAPI,
   markAllAsReadAPI,
 } from "./services/notificationsAPIs";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Notifications() {
   const queryClient = useQueryClient();
@@ -28,6 +30,12 @@ export default function Notifications() {
     <>
       <main className="main-padding">
         <section className="section-padding space-y-3">
+          <div className="-space-y-1 mb-5">
+            <h1 className="text-secondary font-semibold text-xl">
+              Notifications <FontAwesomeIcon icon={faBell} />
+            </h1>
+            <p>Stay updated with your creative community.</p>
+          </div>
           <div className="space-y-2">
             <button
               className="w-full bg-primary py-2 rounded-xl text-white font-semibold cursor-pointer"
@@ -53,19 +61,21 @@ export default function Notifications() {
           {isLoading ? (
             <>
               <div className="space-y-3">
-                <Skeleton className="h-20" />
-                <Skeleton className="h-20" />
-                <Skeleton className="h-20" />
-                <Skeleton className="h-20" />
+                <Skeleton className="h-18" />
+                <Skeleton className="h-18" />
+                <Skeleton className="h-18" />
+                <Skeleton className="h-18" />
               </div>
             </>
           ) : (
-            notifications.map((notification) => (
-              <NotificationCard
-                notification={notification}
-                key={notification._id}
-              />
-            ))
+            <div className="space-y-3 my-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-3">
+              {notifications.map((notification) => (
+                <NotificationCard
+                  notification={notification}
+                  key={notification._id}
+                />
+              ))}
+            </div>
           )}
         </section>
       </main>

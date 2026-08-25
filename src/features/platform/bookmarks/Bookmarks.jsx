@@ -18,8 +18,8 @@ export default function Bookmarks() {
 
   return (
     <main className="main-padding bg-gray-100">
-      <section className="max-w-2xl mx-auto py-6">
-        <h2 className="font-sec text-lg flex items-center gap-2 my-3">
+      <section className="section-padding">
+        <h2 className="font-sec text-lg flex items-center gap-2 mb-3">
           My Bookmarks
           <FontAwesomeIcon
             icon={faBookmark}

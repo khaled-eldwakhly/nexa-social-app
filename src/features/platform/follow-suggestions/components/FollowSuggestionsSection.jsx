@@ -24,9 +24,13 @@ export default function FollowSuggestionsSection() {
           <Skeleton className="h-15" />
         </div>
       ) : (
-        suggestions.map((suggestion) => (
-          <SuggestedUserCard user={suggestion} key={suggestion._id} />
-        ))
+        <>
+          <div className="md:grid md:grid-cols-2 md:gap-3 xl:grid-cols-3">
+            {suggestions.map((suggestion) => (
+              <SuggestedUserCard user={suggestion} key={suggestion._id} />
+            ))}
+          </div>
+        </>
       )}
     </section>
   );

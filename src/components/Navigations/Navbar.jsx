@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 bg-surface p-4 border-b border-border">
+      <nav className="fixed w-full z-50 bg-surface p-4 border-b border-border md:hidden">
         <section className="xl:max-w-7/10 mx-auto flex justify-between items-center">
           {/* logo */}
           <Link to={"/"} className="w-25 flex items-center">
@@ -38,14 +38,17 @@ export default function Navbar() {
           </Link>
           {/* other links & profile icon */}
           <div className="flex items-center gap-4">
-            <div className="bg-tertiary px-1.5 py-1 flex justify-between items-center text-white rounded-md">
+            <Link
+              to={"/notifications"}
+              className="bg-tertiary px-1.5 py-1 flex justify-between items-center text-white rounded-md"
+            >
               <FontAwesomeIcon icon={faBell} />
               {isLoading ? (
                 <Spinner size="sm" className="text-white" />
               ) : (
                 <span className="text-sm font-bold">{unreadCount}</span>
               )}
-            </div>
+            </Link>
             <Dropdown>
               <Dropdown.Trigger className="rounded-full">
                 <Avatar>

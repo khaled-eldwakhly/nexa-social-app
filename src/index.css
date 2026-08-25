@@ -12,28 +12,14 @@
   --color-tertiary: #48cae4;
 
   --color-neutral: #f8fafc;
-
-  /* ^ App colors */
-  /* --color-background: #0b1326;
-  --color-surface: #131b2e;
-  --color-surface-hover: #1e263d;
-  --color-border: #31394d;
-
-  --color-heading: #f8fafc;
-  --color-body: #e2e8f0;
-  --color-muted: #94a3b8;
-
-  --color-success: #10b981;
-  --color-error: #ef4444;
-  --color-warning: #f59e0b; */
 }
 
 @layer components {
   .main-padding {
-    @apply pt-17 pb-22 px-4;
+    @apply pt-17 pb-22 px-4 md:py-5;
   }
   .section-padding {
-    @apply py-8;
+    @apply py-8 md:px-4 md:py-0;
   }
 }
 

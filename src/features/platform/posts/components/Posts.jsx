@@ -6,10 +6,13 @@ export default function Posts({
   isLoading,
   error,
   isError,
+  bookmarksFlag,
 }) {
   return (
     <>
-      <section className="flex-1 min-w-0 space-y-6">
+      <section
+        className={`flex-1 min-w-0 space-y-6 ${bookmarksFlag && "xl:space-y-0 xl:grid xl:grid-cols-2 xl:gap-5 xl:items-start"}`}
+      >
         {isLoading ? (
           <>
             {[...Array(5)].map((element, index) => (

@@ -14,7 +14,7 @@ export default function BottomNavigation() {
   const pathName = location.pathname;
 
   return (
-    <nav className="bg-surface border-t border-border fixed w-full z-50 bottom-0 p-4 font-sec">
+    <nav className="bg-surface border-t border-border fixed w-full z-50 bottom-0 p-4 font-sec md:hidden">
       <section>
         <ul className="flex justify-around items-center">
           <li>
@@ -36,7 +36,10 @@ export default function BottomNavigation() {
             </Link>
           </li>
           <li onClick={() => createPostModal.toggle()}>
-            <FontAwesomeIcon icon={faCirclePlus} className="text-3xl text-primary" />
+            <FontAwesomeIcon
+              icon={faCirclePlus}
+              className="text-3xl text-primary"
+            />
           </li>
           <li>
             <Link
